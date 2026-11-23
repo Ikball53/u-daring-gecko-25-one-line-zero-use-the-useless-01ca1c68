@@ -1,13 +1,13 @@
 from pathlib import Path
 
+# Final line: grand setup ("any wall") collapsing into one vivid,
+# useless detail — the payoff word "soup" lands last for the laugh.
+LINE = "I can hear through any wall, but only when someone is whispering about soup."
 
-def emit_entry() -> None:
-    destination = Path("/output/entry.txt")
-    destination.parent.mkdir(parents=True, exist_ok=True)
-    # Telekinesis that only works after impact — the flaw is the timing.
-    text = "I can open any door with my mind, but only after I walk into it."
-    destination.write_text(text, encoding="utf-8")
-
+def main():
+    out = Path("/output/entry.txt")
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(LINE, encoding="utf-8")
 
 if __name__ == "__main__":
-    emit_entry()
+    main()
